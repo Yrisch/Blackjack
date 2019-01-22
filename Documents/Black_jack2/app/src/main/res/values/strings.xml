@@ -11,4 +11,6 @@
     <string name="title_activity_init">SélectionJoueurs</string>
     <string name="initjoueur">Entrer le nom du Joueur</string>
     <string name="Validatej">Valider joueur</string>
+    <string name="hint">hint</string>
+    <string name="entrer">Entrer</string>
 </resources>

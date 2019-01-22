@@ -1,6 +1,5 @@
-package fr.yrich.black_jack2;
+package fr.yrich.black_jack2.ui.activity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
@@ -9,7 +8,8 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.Toast;
+
+import fr.yrich.black_jack2.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                Intent init = new Intent(getApplicationContext(),InitActivity.class);
+                Intent init = new Intent(getApplicationContext(), InitActivity.class);
                 startActivity(init);
                 finish();
             }
