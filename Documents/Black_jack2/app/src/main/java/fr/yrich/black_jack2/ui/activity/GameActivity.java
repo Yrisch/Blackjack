@@ -63,7 +63,16 @@ public class GameActivity extends AppCompatActivity {
 //        gameInstance = new LogicGame();
 //        gameInstance.init(names, bourses);
 
-        // TODO: 1/22/19  
+        // 1 - display player infos
+        // TODO: 1/22/19
+        // 2 - let player play
+        // TODO: 1/22/19
+        // 3 - listen to events
+        // TODO: 1/22/19
+        // 4 - retrieve player input
+        // TODO: 1/22/19
+        // 5 - send to logic
+        // TODO: 1/22/19
 
 //        currentPlayer = gameInstance.getCurrentPlayer();
 //        mainText.setText(String.format("joueur : " + currentPlayer.getName() + "  Score :" + currentPlayer.getScore()));
