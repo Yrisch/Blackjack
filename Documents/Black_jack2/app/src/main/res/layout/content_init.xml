@@ -8,6 +8,19 @@
     android:gravity="center">
 
 
+    <TextView
+        android:id="@+id/labelPlayersCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/labelPlayersList"
+        app:layout_constraintStart_toEndOf="@+id/labelPlayersList"
+        app:layout_constraintTop_toTopOf="@+id/labelPlayersList"
+        tools:text="2" />
+
     <Button
         android:id="@+id/initstart"
         android:layout_width="wrap_content"
@@ -47,16 +60,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="16dp"
-                android:focusable="true"
                 android:layout_marginTop="16dp"
+                android:focusable="true"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <android.support.design.widget.TextInputEditText
                     android:layout_width="match_parent"
-                    android:textColor="@android:color/white"
                     android:layout_height="match_parent"
-                    android:hint="Nom du joueur" />
+                    android:hint="Nom du joueur"
+                    android:textColor="@android:color/white" />
             </android.support.design.widget.TextInputLayout>
 
             <Button
@@ -68,15 +81,17 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginBottom="16dp"
-                android:background="@drawable/style_button_enter"
                 android:text="@string/entrer"
                 android:textColor="@android:color/white"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:typeface="serif"
+                android:background="@drawable/style_button_enter"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
+
+            <!--android:background="@drawable/style_button_enter"-->
+            <!--android:textSize="18sp"-->
+            <!--android:textStyle="bold"-->
+            <!--android:typeface="serif"-->
 
             <SeekBar
                 android:id="@+id/gold_seekbar"
@@ -90,27 +105,21 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/input_new_player_name" />
 
-            <EditText
+            <TextView
                 android:id="@+id/input_gold"
-                android:focusable="false"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_gravity="end"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
-                android:ems="10"
-                android:inputType="number"
-                android:text="0"
-                android:textAlignment="viewEnd"
+                android:gravity="center"
+                android:textColor="@android:color/white"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/gold_seekbar"
                 app:layout_constraintStart_toEndOf="@+id/gold_seekbar"
-                app:layout_constraintTop_toTopOf="@+id/gold_seekbar" />
+                app:layout_constraintTop_toTopOf="@+id/gold_seekbar"
+                tools:text="0" />
 
-            <android.support.constraint.Group
-                android:id="@+id/group"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
         </android.support.constraint.ConstraintLayout>
 
     </android.support.v7.widget.CardView>
@@ -118,14 +127,27 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/list_players"
         android:layout_width="150dp"
-        android:layout_height="240dp"
+        android:layout_height="200dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
         android:background="@color/translucid_black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelPlayersList"
         tools:listitem="@layout/row_player" />
+
+    <TextView
+        android:id="@+id/labelPlayersList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Joueurs :"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/list_players"
+        app:layout_constraintStart_toStartOf="@+id/list_players"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Joueurs :" />
 
 
 </android.support.constraint.ConstraintLayout>
