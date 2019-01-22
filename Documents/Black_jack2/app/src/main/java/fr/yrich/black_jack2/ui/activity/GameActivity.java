@@ -1,10 +1,7 @@
 package fr.yrich.black_jack2.ui.activity;
 
-import android.content.Intent;
-import android.content.pm.ActivityInfo;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.SeekBar;
@@ -13,10 +10,9 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import fr.yrich.black_jack2.R;
 import fr.yrich.black_jack2.data.Player;
 import fr.yrich.black_jack2.fc.LogicGame;
-import fr.yrich.black_jack2.R;
-import fr.yrich.black_jack2.ui.custom.CustomPopup;
 
 //envoyer à alexandrerocchi38430@gmail.com
 
@@ -29,8 +25,6 @@ public class GameActivity extends AppCompatActivity {
     private GameActivity activity;
 
 
-    //    private ArrayList<String> names;
-//    private ArrayList<Integer> bourses;
     private LogicGame gameInstance;
     private Player currentPlayer;
     private ArrayList<Player> players;
